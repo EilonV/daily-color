@@ -1,0 +1,14 @@
+// SETUP
+@import 'setup/_variables.scss';
+@import 'setup/_mixins.scss';
+
+// BASICS
+@import 'basics/_base.scss';
+@import 'basics/_layout.scss';
+
+// PAGES
+@import 'pages/_main.scss';
+
+// CMPS
+@import 'components/_gallery.scss';
+@import 'components/_color.scss';
