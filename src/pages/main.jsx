@@ -21,7 +21,7 @@ export const Main = () => {
             }
             return hex
         }
-        let today = new Date
+        let today = new Date()
         if (!storageService.loadFromStorage('dailyColor')) {
             let dailyColor = buildHex()
             dispatch(recolor(dailyColor))
