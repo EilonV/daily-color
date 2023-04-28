@@ -1,5 +1,4 @@
 {
-  "homepage":"https://eilonv.github.io/daily-color/",
   "name": "daily-color",
   "version": "0.1.0",
   "private": true,
@@ -44,7 +43,7 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "A daily changing color for inspiration",
   "main": "index.js",
   "repository": {
     "type": "git",
