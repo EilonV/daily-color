@@ -8,10 +8,10 @@ export const Gallery = (dailyColor) => {
     const { galleryPics } = useSelector((state) => state.color)
     const btnRef = useRef()
 
-    const client = createClient('GvghfEPVmBVVTHflnWdzSNSFaI9eSeUpsGy16Gh8YYo5aSzxUJy8HVUF');
     let prevPicClick = ''
 
     useEffect(() => {
+        const client = createClient('GvghfEPVmBVVTHflnWdzSNSFaI9eSeUpsGy16Gh8YYo5aSzxUJy8HVUF');
         const options = ['nature', 'abstract', 'texture', 'pattern', 'space', 'technology', 'flowers', 'sky']
         const query = options[Math.floor(Math.random() * options.length)]
         console.log(query);
@@ -22,7 +22,7 @@ export const Gallery = (dailyColor) => {
         client.photos.search({ query, color, per_page: 15 }).then(photos => {
             dispatch(changeGallery(photos))
         });
-    }, [dailyColor.dailyColor]);
+    }, [dailyColor.dailyColor, dispatch]);
 
     const enlarge = (pic) => {
         console.log(btnRef.current.style.opacity);
@@ -39,7 +39,7 @@ export const Gallery = (dailyColor) => {
         <div className="gallery">
             {galleryPics.photos && galleryPics.photos.map((pic) => {
                 return <div className="pic-wrapper">
-                    <img src={pic.src.large} className={'pic ' + 'pic' + pic.id} alt="" key={pic.id} onClick={(event) => enlarge(pic)} />
+                    <img src={pic.src.large} className={'pic '.concat('pic', pic.id)} alt="" key={pic.id} onClick={(event) => enlarge(pic)} />
                     <button ref={btnRef}></button>
                 </div>
 

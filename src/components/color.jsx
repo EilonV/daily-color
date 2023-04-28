@@ -34,12 +34,12 @@ export const Color = (color) => {
         } else {
             // If the input color is in HEX format
             var hexValues = color.match(/[A-Za-z0-9]{2}/g); // Extract the HEX values as an array
-            var r = parseInt(hexValues[0], 16);
-            var g = parseInt(hexValues[1], 16);
-            var b = parseInt(hexValues[2], 16);
+            var r2 = parseInt(hexValues[0], 16);
+            var g2 = parseInt(hexValues[1], 16);
+            var b2 = parseInt(hexValues[2], 16);
 
             // Convert the HEX values to RGB format
-            var rgb = "rgb(" + r + ", " + g + ", " + b + ")";
+            var rgb = "rgb(" + r2 + ", " + g2 + ", " + b2 + ")";
 
             // Return the RGB color value
             ev.target.innerHTML = rgb;
