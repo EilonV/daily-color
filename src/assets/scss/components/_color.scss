@@ -1,5 +1,19 @@
 .color {
     // background-color: grey;
-    transition: 0.2s;
+    transition: 0.5s;
     min-height: 70vh;
+    font-size: 0px;
+    font-family: Poppins;
+    color: white;
+    animation: widen 0.7s 1 forwards ease;
+    h1 {
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    @keyframes widen {
+        to {
+            font-size: 80px;
+        }
+    }
 }

@@ -13,6 +13,7 @@ export const Main = () => {
     useEffect(() => {
         let dailyColor = buildHex()
         dispatch(recolor(dailyColor))
+        console.log('test');
     }, []);
 
     const buildHex = () => {
@@ -23,11 +24,9 @@ export const Main = () => {
         return hex
     }
 
-    return <div className="main-layout">
-        <section className="full">
-            <Color color={color} />
-            <Gallery dailyColor={color} />
-        </section>
+    return <div className="main">
+        <Color color={color} />
+        <Gallery dailyColor={color} />
     </div>
 
 }

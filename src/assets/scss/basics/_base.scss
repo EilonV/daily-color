@@ -2,11 +2,19 @@
     box-sizing: border-box;
 }
 
+h1,
 p {
     margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     height: 100vh;
+    font-family: Poppins;
+
+}
+
+::selection {
+    background-color: black;
 }
