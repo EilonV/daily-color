@@ -47,7 +47,7 @@
     "gh-pages": "^5.0.0"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.html",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EilonV/daily-color.git"
