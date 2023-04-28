@@ -12,7 +12,7 @@ export const Gallery = (dailyColor) => {
 
     useEffect(() => {
         const client = createClient('GvghfEPVmBVVTHflnWdzSNSFaI9eSeUpsGy16Gh8YYo5aSzxUJy8HVUF');
-        const options = ['nature', 'abstract', 'texture', 'pattern', 'space', 'technology', 'flowers', 'sky']
+        const options = ['color','nature', 'abstract', 'texture', 'pattern', 'space', 'technology', 'flowers', 'sky']
         const query = options[Math.floor(Math.random() * options.length)]
         console.log(query);
         const color = dailyColor.dailyColor.substring(1)
