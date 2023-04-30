@@ -12,7 +12,7 @@ export const Gallery = (dailyColor) => {
 
     useEffect(() => {
         const client = createClient('GvghfEPVmBVVTHflnWdzSNSFaI9eSeUpsGy16Gh8YYo5aSzxUJy8HVUF');
-        const options = ['color','nature', 'abstract', 'texture', 'pattern', 'space', 'technology', 'flowers', 'sky']
+        const options = ['color', 'nature', 'abstract', 'texture', 'pattern', 'space', 'technology', 'flowers', 'sky']
         const query = options[Math.floor(Math.random() * options.length)]
         console.log(query);
         const color = dailyColor.dailyColor.substring(1)
@@ -39,10 +39,11 @@ export const Gallery = (dailyColor) => {
         <div className="gallery">
             {galleryPics.photos && galleryPics.photos.map((pic) => {
                 return <div className="pic-wrapper">
-                    <img src={pic.src.large} className={'pic '.concat('pic', pic.id)} alt="" key={pic.id} onClick={(event) => enlarge(pic)} />
-                    <button ref={btnRef}></button>
+                    <div className="pic">
+                        <img src={pic.src.large} className={'pic '.concat('pic', pic.id)} alt="" key={pic.id} onClick={(event) => enlarge(pic)} />
+                        <button ref={btnRef}>CLOSE</button>
+                    </div>
                 </div>
-
             })}
         </div>
     </section>
