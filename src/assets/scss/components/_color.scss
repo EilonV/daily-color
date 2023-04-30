@@ -6,10 +6,12 @@
     font-family: Poppins;
     color: white;
     animation: widen 0.7s 1 forwards ease;
+    
 
     h1 {
         cursor: pointer;
-        width: fit-content;
+        width: fit-content;       
+        text-shadow: transparent; 
     }
 
     @keyframes widen {
