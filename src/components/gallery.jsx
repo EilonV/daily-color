@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { createClient } from 'pexels';
 import { changeGallery } from "../slices/colorSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 export const Gallery = (dailyColor) => {
     const dispatch = useDispatch()
     const { galleryPics } = useSelector((state) => state.color)
-    const btnRef = useRef()
+    // const btnRef = useRef()
 
     let prevPicClick = ''
 
