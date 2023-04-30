@@ -41,7 +41,6 @@ export const Gallery = (dailyColor) => {
                 return <div className="pic-wrapper">
                     <div className="pic">
                         <img src={pic.src.large} className={'pic '.concat('pic', pic.id)} alt="" key={pic.id} onClick={(event) => enlarge(pic)} />
-                        <button ref={btnRef}>CLOSE</button>
                     </div>
                 </div>
             })}
