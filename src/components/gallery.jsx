@@ -25,7 +25,7 @@ export const Gallery = (dailyColor) => {
     }, [dailyColor.dailyColor, dispatch]);
 
     const enlarge = (pic) => {
-        console.log(btnRef.current.style.opacity);
+        // console.log(btnRef.current.style.opacity);
         if (prevPicClick) {
             prevPicClick.classList.remove('active')
         }
