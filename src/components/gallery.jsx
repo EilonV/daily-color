@@ -57,7 +57,10 @@ export const Gallery = (dailyColor) => {
             {galleryPics.photos && galleryPics.photos.map((pic) => {
                 return <div className="pic-wrapper" key={pic.id} >
                     <div className="pic">
-                        <img src={pic.src.large} className={'pic '.concat('pic', pic.id)} alt="" onClick={(event) => resize(event, pic)} onKeyDown={esc} tabIndex={-1} draggable="false"/>
+                        {pic.src.large ?
+                            <img src={pic.src.large} className={'pic '.concat('pic', pic.id)} alt="" onClick={(event) => resize(event, pic)} onKeyDown={esc} tabIndex={-1} draggable="false" />
+                            : <img src={pic.src.original} className={'pic '.concat('pic', pic.id)} alt="" onClick={(event) => resize(event, pic)} onKeyDown={esc} tabIndex={-1} draggable="false" />}
+
                     </div>
                 </div>
             })}
