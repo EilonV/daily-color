@@ -32,15 +32,32 @@ export const Gallery = (dailyColor) => {
         let currPic = document.querySelector('.pic' + pic.id)
         currPic.classList.add('active')
         prevPicClick = currPic
+    }
 
+    const resize = (ev, pic) => {
+        const classList = ev.target.classList
+        if (classList.value.includes('active')) {
+            // Shrinks image back to grid
+            prevPicClick.classList.remove('active');
+        }
+        else {
+            // Enlarges image to mid screen
+            enlarge(pic)
+        }
+    }
+
+    const esc = (ev) => {
+        if (ev.target && ev.key === 'Escape') {
+            ev.target.classList.remove('active')
+        }
     }
 
     return <section className="gallery-wrapper main-layout">
         <div className="gallery">
             {galleryPics.photos && galleryPics.photos.map((pic) => {
-                return <div className="pic-wrapper" key={pic.id}>
+                return <div className="pic-wrapper" key={pic.id} >
                     <div className="pic">
-                        <img src={pic.src.large} className={'pic '.concat('pic', pic.id)} alt="" onClick={(event) => enlarge(pic)} />
+                        <img src={pic.src.large} className={'pic '.concat('pic', pic.id)} alt="" onClick={(event) => resize(event, pic)} onKeyDown={esc} tabIndex={-1} draggable="false"/>
                     </div>
                 </div>
             })}
