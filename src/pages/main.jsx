@@ -35,7 +35,6 @@ export const Main = () => {
 
     }, [dispatch])
 
-    console.log(color);
     return <div className="main">
         <Color color={color} />
         <Gallery dailyColor={color} />
